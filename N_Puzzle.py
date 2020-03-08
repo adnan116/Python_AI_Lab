@@ -65,11 +65,11 @@ print(checkEven(inv))
 
 
 def solvePossible(W):
-    if(checkEven(len(W))==False and checkEven(inversion(W))==True):
+    if(checkEven(len(W))==False and checkEven(inversion(flatBoard(W)))==True):
         return "Possible"
-    elif(checkEven(len(W))==True and checkEven(blankPosition(W))==False and checkEven(inversion(W))==True):
+    elif(checkEven(len(W))==True and checkEven(blankPosition(W))==False and checkEven(inversion(flatBoard(W)))==True):
         return "Possible"
-    elif(checkEven(len(W))==True and checkEven(blankPosition(W))==True and checkEven(inversion(W))==False):
+    elif(checkEven(len(W))==True and checkEven(blankPosition(W))==True and checkEven(inversion(flatBoard(W)))==False):
         return "Possible"
     else:
         return "Not Possible"
@@ -77,4 +77,3 @@ def solvePossible(W):
 
 
 print("Possibility: ", solvePossible(A))
-
